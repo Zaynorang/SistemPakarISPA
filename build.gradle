@@ -1,0 +1,10 @@
+// build.gradle (Project Level)
+
+plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin.android) apply false // <--- Tambahkan baris ini
+    // Jika Anda memiliki modul library (selain aplikasi), Anda mungkin juga perlu:
+    // alias(libs.plugins.android.library) apply false
+}
+
+// Bagian `allprojects` dan `tasks.register('clean')` tetap sama jika ada

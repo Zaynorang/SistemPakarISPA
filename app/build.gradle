@@ -1,0 +1,58 @@
+// app/build.gradle
+
+plugins {
+    alias(libs.plugins.android.application) // Pastikan ini adalah satu-satunya deklarasi untuk 'com.android.application'
+    alias(libs.plugins.kotlin.android)     // <--- GUNAKAN ALIAS INI UNTUK PLUGIN KOTLIN
+    // alias(libs.plugins.kotlin.android.extensions) // Ini sudah deprecated, jangan digunakan lagi
+    id 'kotlin-kapt'                        // Ini biasanya tetap menggunakan 'id' langsung
+}
+
+android {
+    namespace 'com.example.sistempakarispa'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.example.sistempakarispa"
+        minSdk 21
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    // Pastikan blok kotlinOptions ada jika Anda menggunakan Kotlin
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+    // Pastikan View Binding diaktifkan jika Anda sudah menghapus kotlin-android-extensions
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+
+    implementation libs.androidx.core.ktx
+    implementation libs.makeramen.roundedimageview
+
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit         // <--- Pastikan ini persis seperti ini!
+    androidTestImplementation libs.espresso.core
+  //  androidTestImplementation libs.androidx.test.ext.junit
+   // androidTestImplementation libs.androidx.test.espresso.core
+}
