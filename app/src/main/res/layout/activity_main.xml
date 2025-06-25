@@ -38,7 +38,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
-                    android:text="Sistem Pakar THT"
+                    android:text="Sistem Pakar Penyakit ISPA"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -97,7 +97,7 @@
                             android:layout_centerInParent="true"
                             android:layout_marginTop="10dp"
                             android:layout_toEndOf="@id/ivGejala"
-                            android:text="Daftar Gejala"
+                            android:text="Jenis ISPA"
                             android:textColor="@android:color/holo_blue_light"
                             android:textSize="25sp"
                             android:textStyle="bold" />

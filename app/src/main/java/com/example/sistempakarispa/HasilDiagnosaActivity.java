@@ -20,6 +20,7 @@ import com.example.sistempakarispa.R;
 import com.example.sistempakarispa.DatabaseHelper;
 import com.google.android.material.button.MaterialButton;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -64,39 +65,48 @@ public class HasilDiagnosaActivity extends AppCompatActivity {
             gejala_terpilih = str_hasil.split("#");
         }
 
-        double cf_gabungan;
-        double cf;
-        HashMap<String, Double> mapHasil = new HashMap<>();
+        // Langkah 1: Ubah array nama gejala yang dipilih menjadi List kode gejala
+        // Ini dilakukan sekali saja untuk efisiensi, menghindari query berulang di dalam loop.
+        ArrayList<String> kodeGejalaTerpilih = new ArrayList<>();
+        if (gejala_terpilih.length > 0) {
+            for (String namaGejala : gejala_terpilih) {
+                // Query untuk mendapatkan kode dari nama gejala
+                String queryGetKode = "SELECT kode_gejala FROM gejala WHERE nama_gejala = ?";
+                Cursor cursorKode = sqLiteDatabase.rawQuery(queryGetKode, new String[]{namaGejala});
+                if (cursorKode.moveToFirst()) {
+                    kodeGejalaTerpilih.add(cursorKode.getString(0));
+                }
+                cursorKode.close();
+            }
+        }
 
-        String query_penyakit = "SELECT kode_penyakit FROM penyakit order by kode_penyakit";
+        // Langkah 2: Hitung CF untuk setiap penyakit berdasarkan gejala yang dipilih
+        HashMap<String, Double> mapHasil = new HashMap<>();
+        String query_penyakit = "SELECT kode_penyakit FROM penyakit ORDER BY kode_penyakit";
         Cursor cursor_penyakit = sqLiteDatabase.rawQuery(query_penyakit, null);
 
+        // Loop untuk setiap penyakit (P01, P02, P03)
         while (cursor_penyakit.moveToNext()) {
-            cf_gabungan = (double) 0;
-            int i = 0;
-            String query_rule = "SELECT nilai_cf, kode_gejala FROM rule where kode_penyakit = '" + cursor_penyakit.getString(0) + "'";
-            Cursor cursor_rule = sqLiteDatabase.rawQuery(query_rule, null);
-            while (cursor_rule.moveToNext()) {
-                cf = cursor_rule.getDouble(0);
-                for (String s_gejala_terpilih : gejala_terpilih) {
-                    String query_gejala = "SELECT kode_gejala FROM gejala where nama_gejala = '" + s_gejala_terpilih + "'";
-                    Cursor cursor_gejala = sqLiteDatabase.rawQuery(query_gejala, null);
-                    cursor_gejala.moveToFirst();
-                    if (cursor_rule.getString(1).equals(cursor_gejala.getString(0))) {
-                        if (i > 1) {
-                            cf_gabungan = cf + (cf_gabungan * (1 - cf));
-                        } else if (i == 1) {
-                            cf_gabungan = cf_gabungan + (cf * (1 - cf_gabungan));
-                        } else {
-                            cf_gabungan = cf;
-                        }
-                        i++;
-                    }
-                    cursor_gejala.close();
+            String kodePenyakit = cursor_penyakit.getString(0);
+            double cf_gabungan = 0.0;
+
+            // Loop untuk setiap kode gejala yang dipilih oleh pengguna
+            for (String kodeGejala : kodeGejalaTerpilih) {
+                // Cari aturan (rule) yang cocok untuk penyakit dan gejala saat ini
+                String query_rule = "SELECT nilai_cf FROM rule WHERE kode_penyakit = ? AND kode_gejala = ?";
+                Cursor cursor_rule = sqLiteDatabase.rawQuery(query_rule, new String[]{kodePenyakit, kodeGejala});
+
+                // Jika aturan ditemukan, gabungkan nilai CF-nya
+                if (cursor_rule.moveToFirst()) {
+                    double cf_rule = cursor_rule.getDouble(0);
+
+                    // Rumus penggabungan Certainty Factor (CF) yang benar
+                    cf_gabungan = cf_gabungan + cf_rule * (1 - cf_gabungan);
                 }
+                cursor_rule.close();
             }
-            cursor_rule.close();
-            mapHasil.put(cursor_penyakit.getString(0), cf_gabungan * 100);
+            // Simpan hasil akhir (sudah dalam bentuk persentase)
+            mapHasil.put(kodePenyakit, cf_gabungan * 100);
         }
         cursor_penyakit.close();
 
@@ -190,5 +200,4 @@ public class HasilDiagnosaActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

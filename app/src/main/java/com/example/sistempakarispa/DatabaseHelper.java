@@ -6,9 +6,6 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.sistempakarispa.ModelDaftarPenyakit;
-import com.example.sistempakarispa.ModelDiagnosa;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -18,7 +15,7 @@ import java.util.ArrayList;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    private static String DB_NAME = "sp_tht.db";
+    private static String DB_NAME = "sp_ispa.db";
     private static String DB_PATH = "";
     private static final int DB_VERSION = 1;
 
