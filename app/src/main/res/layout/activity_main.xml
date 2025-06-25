@@ -87,7 +87,8 @@
                     app:cardCornerRadius="30dp"
                     app:cardElevation="3dp"
                     app:strokeColor="@color/primary"
-                    app:strokeWidth="2dp">
+                    app:strokeWidth="2dp"
+                    app:cardBackgroundColor="#E1EEBC">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -125,7 +126,8 @@
                     app:cardCornerRadius="30dp"
                     app:cardElevation="3dp"
                     app:strokeColor="@color/primary"
-                    app:strokeWidth="2dp">
+                    app:strokeWidth="2dp"
+                    app:cardBackgroundColor="#E1EEBC">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -163,7 +165,8 @@
                     app:cardCornerRadius="30dp"
                     app:cardElevation="3dp"
                     app:strokeColor="@color/primary"
-                    app:strokeWidth="2dp">
+                    app:strokeWidth="2dp"
+                    app:cardBackgroundColor="#E1EEBC">
 
                     <RelativeLayout
                         android:layout_width="match_parent"

@@ -10,7 +10,7 @@
     <color name="primary">#2196F3</color>
 
     <!-- Tambahan warna hijau -->
-    <color name="green_200">#328E6E</color>
+    <color name="green_200">#90C67C</color>
     <color name="green_500">#E1EEBC</color>
     <color name="green_700">#FF388E3C</color>
 </resources>
