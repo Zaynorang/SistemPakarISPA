@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".AboutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Toolbar untuk judul dan tombol kembali -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:titleTextColor="@android:color/black"
+            app:navigationIcon="?attr/homeAsUpIndicator" /> <!-- Ikon panah kembali default -->
+
+        <!-- Konten About Aplikasi -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/ic_about" /> <!-- Pastikan ikon ini ada -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Sistem Pakar Penyakit ISPA"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Versi 1.0.0"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Bagian Informasi Umum -->
+                <TextView
+                    android:id="@+id/tvAboutContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Aplikasi ini dirancang sebagai sistem pakar untuk membantu dalam diagnosa awal Penyakit ISPA (Infeksi Saluran Pernapasan Akut). Aplikasi ini menyediakan informasi tentang gejala, jenis-jenis ISPA, dan langkah-langkah penanganan dasar."
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Bagian Pencetan/Expandable - Misi Aplikasi -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcMisi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="@color/primary"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Misi Aplikasi"
+                                android:textColor="@android:color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivMisiArrow"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_arrow_down" /> <!-- Pastikan ikon ini ada atau gunakan panah default -->
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvMisiDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Misi kami adalah memberikan akses mudah dan cepat ke informasi terpercaya mengenai ISPA, serta mendukung diagnosa dini untuk penanganan yang lebih efektif dan pencegahan komplikasi serius. Kami berkomitmen untuk meningkatkan kesadaran masyarakat tentang kesehatan pernapasan."
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Bagian Pencetan/Expandable - Visi Aplikasi -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcVisi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="@color/primary"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Visi Aplikasi"
+                                android:textColor="@android:color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivVisiArrow"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_arrow_down" /> <!-- Pastikan ikon ini ada atau gunakan panah default -->
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvVisiDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Menjadi aplikasi sistem pakar terkemuka dalam bidang ISPA, yang dikenal karena akurasi, kemudahan penggunaan, dan kontribusinya terhadap peningkatan kesehatan masyarakat secara umum."
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Bagian Dikembangkan Oleh -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Dikembangkan oleh:\nTim Pengembang ISPA App"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -145,6 +145,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcTentang"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:layout_margin="10dp"
