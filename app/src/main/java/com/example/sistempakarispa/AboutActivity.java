@@ -8,29 +8,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.TextView; // Import TextView
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar; // Import Toolbar
 
-// Anda tidak lagi membutuhkan import ini karena tidak ada database atau RecyclerView di AboutActivity
-// import android.database.sqlite.SQLiteDatabase;
-// import androidx.recyclerview.widget.LinearLayoutManager;
-// import androidx.recyclerview.widget.RecyclerView;
-// import com.example.sistempakarispa.DaftarPenyakitAdapter;
-// import com.example.sistempakarispa.DatabaseHelper;
-// import com.example.sistempakarispa.ModelDaftarPenyakit;
-// import java.util.ArrayList;
-
 public class AboutActivity extends AppCompatActivity {
 
     Toolbar toolbar; // Deklarasikan toolbar
-    // Anda tidak lagi membutuhkan variabel ini
-    // SQLiteDatabase sqLiteDatabase;
-    // DatabaseHelper databaseHelper;
-    // ArrayList<ModelDaftarPenyakit> modelDaftarPenyakitList = new ArrayList<>();
-    // DaftarPenyakitAdapter daftarPenyakitAdapter;
-    // RecyclerView rvDaftarPenyakit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

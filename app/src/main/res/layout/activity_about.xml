@@ -180,7 +180,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Dikembangkan oleh:\nTim Pengembang ISPA App"
+                    android:text="Dikembangkan Oleh Kelompok:\nAhmad Zayn Usman\nFandi Yakub\nAkmal Taufiqurrahman\nWisnu Chandra Mukti Wibowo\nPandu Nugraha Saputra"
                     android:textColor="@android:color/black"
                     android:textSize="16sp"
                     android:textAlignment="center"
