@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="#F3E5AB"
     android:fitsSystemWindows="true"
     tools:context=".AboutActivity">
 
@@ -67,6 +67,7 @@
                     android:layout_height="wrap_content"
                     android:text="Aplikasi ini dirancang sebagai sistem pakar untuk membantu dalam diagnosa awal Penyakit ISPA (Infeksi Saluran Pernapasan Akut). Aplikasi ini menyediakan informasi tentang gejala, jenis-jenis ISPA, dan langkah-langkah penanganan dasar."
                     android:textColor="@android:color/black"
+                    android:justificationMode="inter_word"
                     android:textSize="16sp"
                     android:lineSpacingExtra="4dp"
                     android:layout_marginBottom="20dp"/>
@@ -80,48 +81,7 @@
                     app:cardCornerRadius="16dp"
                     app:cardElevation="2dp"
                     app:strokeColor="@color/primary"
-                    app:strokeWidth="1dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="16dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Misi Aplikasi"
-                                android:textColor="@android:color/black"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-
-                            <ImageView
-                                android:id="@+id/ivMisiArrow"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/ic_arrow_down" /> <!-- Pastikan ikon ini ada atau gunakan panah default -->
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/tvMisiDetail"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Misi kami adalah memberikan akses mudah dan cepat ke informasi terpercaya mengenai ISPA, serta mendukung diagnosa dini untuk penanganan yang lebih efektif dan pencegahan komplikasi serius. Kami berkomitmen untuk meningkatkan kesadaran masyarakat tentang kesehatan pernapasan."
-                            android:textColor="@android:color/black"
-                            android:textSize="14sp"
-                            android:visibility="gone" />
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                    app:strokeWidth="1dp"/>
 
                 <!-- Bagian Pencetan/Expandable - Visi Aplikasi -->
                 <com.google.android.material.card.MaterialCardView
@@ -132,48 +92,7 @@
                     app:cardCornerRadius="16dp"
                     app:cardElevation="2dp"
                     app:strokeColor="@color/primary"
-                    app:strokeWidth="1dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="16dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Visi Aplikasi"
-                                android:textColor="@android:color/black"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-
-                            <ImageView
-                                android:id="@+id/ivVisiArrow"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/ic_arrow_down" /> <!-- Pastikan ikon ini ada atau gunakan panah default -->
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/tvVisiDetail"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Menjadi aplikasi sistem pakar terkemuka dalam bidang ISPA, yang dikenal karena akurasi, kemudahan penggunaan, dan kontribusinya terhadap peningkatan kesehatan masyarakat secara umum."
-                            android:textColor="@android:color/black"
-                            android:textSize="14sp"
-                            android:visibility="gone" />
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                    app:strokeWidth="1dp"/>
 
                 <!-- Bagian Dikembangkan Oleh -->
                 <TextView

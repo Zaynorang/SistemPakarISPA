@@ -110,7 +110,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_toEndOf="@id/ivGejala"
                             android:text="Jenis ISPA"
-                            android:textColor="@android:color/holo_blue_light"
+                            android:textColor="#000"
                             android:textSize="25sp"
                             android:textStyle="bold" />
 
@@ -149,7 +149,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_toEndOf="@id/ivDiagnosa"
                             android:text="Diagnosa Gejala"
-                            android:textColor="@android:color/holo_blue_light"
+                            android:textColor="#000"
                             android:textSize="25sp"
                             android:textStyle="bold" />
 
@@ -188,7 +188,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_toEndOf="@id/ivTentang"
                             android:text="Tentang Aplikasi"
-                            android:textColor="@android:color/holo_blue_light"
+                            android:textColor="#000"
                             android:textSize="25sp"
                             android:textStyle="bold" />
 
