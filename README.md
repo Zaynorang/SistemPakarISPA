@@ -91,8 +91,9 @@ com.example.sistempakarispa
 │ └── SplashActivity.java
 │ ├── DiagnosaAdapter.java
 │ └── DaftarPenyakitAdapter.java
-├── ModelDiagnosa.java
-└── ModelDaftarPenyakit.java
+│ └── DatabaseHelper.java
+│ └── ModelDiagnosa.java
+│ └──ModelDaftarPenyakit.java
 
 assets
 ├── sp_ispa.java
