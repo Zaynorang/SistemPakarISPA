@@ -145,14 +145,17 @@ app/src/main/assets/
 5. Gunakan emulator atau perangkat Android fisik.
 
 ## 📸 Tampilan Aplikasi
-Halaman Utama
-![alt](screenshot.png)
+### Halaman Utama
+![Halaman Utama](gambar/main.png)
 
-Daftar Penyakit
+### Daftar Penyakit
+![Daftar Penyakit](gambar/daftar_penyakit.png)
 
-Diagnosa Gejala
+### Diagnosa Gejala
+![Diagnosa Gejala](gambar/diagnosa_gejala.png)
 
-Hasil Diagnosa
+### Hasil Diagnosa
+![Hasil Diagnosa](gambar/hasil_diagnosa.png)
 
 
 ## 👨‍💻 Kontributor
