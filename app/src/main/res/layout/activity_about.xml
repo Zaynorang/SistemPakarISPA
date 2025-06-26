@@ -39,7 +39,7 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="20dp"
-                    android:src="@drawable/ic_about" /> <!-- Pastikan ikon ini ada -->
+                    android:src="@mipmap/ic_launcher_round" /> <!-- Pastikan ikon ini ada -->
 
                 <TextView
                     android:layout_width="wrap_content"
