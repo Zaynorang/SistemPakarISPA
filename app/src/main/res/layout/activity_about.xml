@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F3E5AB"
+    android:background="@drawable/bg_about"
     android:fitsSystemWindows="true"
     tools:context=".AboutActivity">
 
@@ -13,16 +13,16 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- Toolbar untuk judul dan tombol kembali -->
+        <!-- Toolbar -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@android:color/transparent"
             app:titleTextColor="@android:color/black"
-            app:navigationIcon="?attr/homeAsUpIndicator" /> <!-- Ikon panah kembali default -->
+            app:navigationIcon="?attr/homeAsUpIndicator" />
 
-        <!-- Konten About Aplikasi -->
+        <!-- Scrollable Content -->
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -32,81 +32,91 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="24dp"
+                android:gravity="center_horizontal">
 
+                <!-- Logo -->
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="20dp"
-                    android:src="@mipmap/ic_launcher_round" /> <!-- Pastikan ikon ini ada -->
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="Logo Aplikasi"
+                    android:src="@mipmap/ic_launcher_round" />
 
+                <!-- Judul -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
                     android:text="Sistem Pakar Penyakit ISPA"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp"
+                    android:textColor="#222222"
+                    android:textSize="22sp"
                     android:textStyle="bold"
-                    android:layout_marginBottom="10dp"/>
+                    android:fontFamily="sans-serif"
+                    android:layout_marginBottom="6dp" />
 
+                <!-- Versi -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
                     android:text="Versi 1.0.0"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="20dp"/>
+                    android:textColor="#666666"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginBottom="20dp" />
 
-                <!-- Bagian Informasi Umum -->
+                <!-- Deskripsi Aplikasi -->
                 <TextView
                     android:id="@+id/tvAboutContent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Aplikasi ini dirancang sebagai sistem pakar untuk membantu dalam diagnosa awal Penyakit ISPA (Infeksi Saluran Pernapasan Akut). Aplikasi ini menyediakan informasi tentang gejala, jenis-jenis ISPA, dan langkah-langkah penanganan dasar."
-                    android:textColor="@android:color/black"
+                    android:textColor="#333333"
                     android:justificationMode="inter_word"
                     android:textSize="16sp"
-                    android:lineSpacingExtra="4dp"
-                    android:layout_marginBottom="20dp"/>
+                    android:lineSpacingExtra="6dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginBottom="24dp" />
 
-                <!-- Bagian Pencetan/Expandable - Misi Aplikasi -->
+                <!-- Misi -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/mcMisi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="8dp"
+                    android:layout_marginBottom="16dp"
                     app:cardCornerRadius="16dp"
-                    app:cardElevation="2dp"
-                    app:strokeColor="@color/primary"
-                    app:strokeWidth="1dp"/>
+                    app:cardElevation="4dp"
+                    app:strokeColor="#6200EE"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@android:color/white" />
 
-                <!-- Bagian Pencetan/Expandable - Visi Aplikasi -->
+                <!-- Visi -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/mcVisi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="8dp"
+                    android:layout_marginBottom="24dp"
                     app:cardCornerRadius="16dp"
-                    app:cardElevation="2dp"
-                    app:strokeColor="@color/primary"
-                    app:strokeWidth="1dp"/>
+                    app:cardElevation="4dp"
+                    app:strokeColor="#6200EE"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@android:color/white" />
 
-                <!-- Bagian Dikembangkan Oleh -->
+                <!-- Developer -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
                     android:text="Dikembangkan Oleh Kelompok:\nAhmad Zayn Usman\nFandi Yakub\nAkmal Taufiqurrahman\nWisnu Chandra Mukti Wibowo\nPandu Nugraha Saputra"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
+                    android:textColor="#222222"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif"
                     android:textAlignment="center"
-                    android:layout_marginTop="20dp"/>
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginTop="12dp"
+                    android:padding="8dp" />
 
             </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
 
+        </androidx.core.widget.NestedScrollView>
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
