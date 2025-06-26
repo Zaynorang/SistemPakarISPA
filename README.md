@@ -163,11 +163,11 @@ app/src/main/assets/
 ## 👨‍💻 Kontributor
 Proyek ini dikembangkan sebagai bagian dari Tugas Ujian Akhir Semester (UAS) oleh:
 
-Ahmad Zayn Usman
-Pandu Nugraha Saputra
-Akmal Taufiqurrahman
-Fandi Yakub
-Wisnu Chandra Mukti Wibowo
+- Ahmad Zayn Usman
+- Pandu Nugraha Saputra
+- Akmal Taufiqurrahman
+- Fandi Yakub
+- Wisnu Chandra Mukti Wibowo
 
 ⭐️ Dukung Proyek Ini
 Jika kamu merasa terbantu oleh aplikasi ini, jangan ragu untuk memberi ⭐️ di repository GitHub kami.
