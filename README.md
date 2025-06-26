@@ -146,7 +146,7 @@ app/src/main/assets/
 
 ## 📸 Tampilan Aplikasi
 ### Halaman Utama
-![Halaman Utama](gambar/main.png)
+<img src="gambar/main.png" alt="Halaman Utama" width="200"/>
 
 ### Daftar Penyakit
 ![Daftar Penyakit](gambar/daftar_penyakit.png)
