@@ -12,6 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SistemPakarISPA"
         tools:targetApi="31">
+
+        <!-- SplashActivity sekarang menjadi launcher -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity tidak lagi launcher -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
         <activity
             android:name=".AboutActivity"
             android:exported="false" />
@@ -27,15 +43,7 @@
         <activity
             android:name=".DaftarPenyakitActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
