@@ -29,23 +29,23 @@
         <FrameLayout
             android:id="@+id/frameHeader"
             android:layout_width="match_parent"
-            android:layout_height="300dp">
+            android:layout_height="280dp">
 
-            <com.makeramen.roundedimageview.RoundedImageView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="end"
-                android:layout_marginTop="-35dp"
-                android:elevation="5dp"
-                android:src="@drawable/bg_header"
-                app:riv_corner_radius_bottom_left="40dp"
-                app:riv_corner_radius_bottom_right="40dp"
-                app:riv_corner_radius_top_left="40dp" />
+
+                android:layout_height="150dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bg_rounded_all"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
-                android:layout_gravity="bottom"
+                android:layout_gravity="center"
                 android:background="@drawable/bg_rounded_all"
                 android:gravity="bottom"
                 android:orientation="vertical">
@@ -54,7 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
-                    android:text="Sistem Pakar THT"
+                    android:text="Sistem Pakar Penyakit ISPA"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -70,6 +70,17 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="match_parent"
+                android:layout_height="244dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="-70dp"
+                android:elevation="5dp"
+                android:src="@drawable/bg_header"
+                app:riv_corner_radius_bottom_left="40dp"
+                app:riv_corner_radius_bottom_right="40dp"
+                app:riv_corner_radius_top_left="40dp" />
 
         </FrameLayout>
 
