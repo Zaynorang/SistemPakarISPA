@@ -7,17 +7,23 @@
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:background="@android:color/transparent"
-        android:elevation="0dp"
-        app:elevation="0dp">
+        android:elevation="12dp"
+        android:translationZ="12dp"
+        app:elevation="12dp">
 
-        <androidx.appcompat.widget.Toolbar
+
+    <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:elevation="10dp"
+            android:translationZ="10dp"
             app:navigationIcon="@drawable/ic_arrow_back" />
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <RelativeLayout
@@ -31,11 +37,14 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
+
                 android:layout_height="150dp"
                 android:layout_gravity="bottom"
                 android:background="@drawable/bg_rounded_all"
                 android:gravity="bottom"
-                android:orientation="vertical" />
+                android:orientation="vertical">
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -63,6 +72,7 @@
                     android:textColor="@android:color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+
             </LinearLayout>
 
             <com.makeramen.roundedimageview.RoundedImageView
@@ -75,6 +85,7 @@
                 app:riv_corner_radius_bottom_left="40dp"
                 app:riv_corner_radius_bottom_right="40dp"
                 app:riv_corner_radius_top_left="40dp" />
+
         </FrameLayout>
 
         <androidx.core.widget.NestedScrollView
@@ -87,18 +98,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
-                <!-- ✅ Tambahan tvTitle -->
-                <TextView
-                    android:id="@+id/tvTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:textColor="@color/black"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -138,7 +137,11 @@
                     android:layout_marginEnd="20dp"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
+
             </LinearLayout>
+
         </androidx.core.widget.NestedScrollView>
+
     </RelativeLayout>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
