@@ -13,7 +13,8 @@
         android:background="@android:color/transparent"
         android:elevation="12dp"
         android:translationZ="12dp"
-        app:elevation="12dp">
+        app:elevation="12dp"
+        app:liftOnScroll="false">
 
 
         <androidx.appcompat.widget.Toolbar
