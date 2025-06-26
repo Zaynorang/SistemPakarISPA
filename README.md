@@ -149,14 +149,16 @@ app/src/main/assets/
 <img src="gambar/main.png" alt="Halaman Utama" width="200"/>
 
 ### Daftar Penyakit
-![Daftar Penyakit](gambar/daftar_penyakit.png)
+<img src="gambar/daftarpenyakit.png" alt="Halaman Utama" width="200"/>
 
 ### Diagnosa Gejala
-![Diagnosa Gejala](gambar/diagnosa_gejala.png)
+<img src="gambar/gejalapenyakitcheck.png" alt="Halaman Utama" width="200"/>
 
 ### Hasil Diagnosa
-![Hasil Diagnosa](gambar/hasil_diagnosa.png)
+<img src="gambar/hasildiagnosa.png" alt="Halaman Utama" width="200"/>
 
+### About
+<img src="gambar/about.png" alt="Halaman Utama" width="200"/>
 
 ## 👨‍💻 Kontributor
 Proyek ini dikembangkan sebagai bagian dari Tugas Ujian Akhir Semester (UAS) oleh:
