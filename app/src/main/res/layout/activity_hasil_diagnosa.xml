@@ -6,179 +6,121 @@
     android:background="@android:color/white"
     android:fitsSystemWindows="true">
 
+    <!-- Toolbar di atas tanpa margin -->
     <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:background="@android:color/transparent"
-        android:elevation="12dp"
-        android:translationZ="12dp"
-        app:elevation="12dp"
+        android:elevation="4dp"
         app:liftOnScroll="false">
-
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="?actionBarSize"
-            android:layout_height="?actionBarSize"
-            android:elevation="10dp"
-            android:translationZ="10dp"
-            app:navigationIcon="@drawable/ic_arrow_back" />
-
-
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            android:background="@android:color/transparent"
+            app:titleTextColor="@android:color/black" />
     </com.google.android.material.appbar.AppBarLayout>
 
+    <!-- Konten utama -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="?attr/actionBarSize">
 
+        <!-- Header Image -->
         <FrameLayout
             android:id="@+id/frameHeader"
             android:layout_width="match_parent"
-            android:layout_height="280dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-
-                android:layout_height="150dp"
-                android:layout_gravity="bottom"
-                android:background="@drawable/bg_rounded_all"
-                android:gravity="bottom"
-                android:orientation="vertical">
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:layout_gravity="center"
-                android:background="@drawable/bg_rounded_all"
-                android:gravity="bottom"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
-                    android:text="Sistem Pakar Penyakit ISPA"
-                    android:textColor="@android:color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginBottom="30dp"
-                    android:text="Diagnosa - Gejala - Penanganan"
-                    android:textColor="@android:color/white"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
+            android:layout_height="220dp">
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:layout_width="match_parent"
-                android:layout_height="244dp"
-                android:layout_gravity="end"
-                android:layout_marginTop="-70dp"
-                android:elevation="5dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:elevation="4dp"
                 android:src="@drawable/bg_header"
                 app:riv_corner_radius_bottom_left="40dp"
-                app:riv_corner_radius_bottom_right="40dp"
-                app:riv_corner_radius_top_left="40dp" />
-
+                app:riv_corner_radius_bottom_right="40dp" />
         </FrameLayout>
 
+        <!-- Konten Scroll -->
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/frameHeader"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="-16dp"
+            android:clipToPadding="false"
+            android:padding="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="8dp">
 
+                <!-- Penjelasan -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
                     android:text="Penjelasan :"
                     android:textColor="@color/black"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
 
                 <TextView
                     android:id="@+id/tvGejala"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="20dp"
                     android:background="@drawable/border"
-                    android:padding="4dp"
+                    android:padding="10dp"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:layout_marginBottom="20dp" />
 
+                <!-- Hasil Diagnosa -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="30dp"
                     android:text="Anda kemungkinan mengalami :"
                     android:textColor="@color/black"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
 
                 <TextView
                     android:id="@+id/tvNamaPenyakit"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="20dp"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:layout_marginBottom="24dp" />
 
+                <!-- Tombol -->
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnDiagnosaUlang"
-                    style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_gravity="bottom"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginEnd="40dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="12dp"
                     android:backgroundTint="#054b0c"
                     android:text="Diagnosa Ulang"
+                    android:textColor="@android:color/white"
                     android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    app:cornerRadius="20dp"
-                    app:elevation="5dp" />
+                    app:cornerRadius="20dp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnDaftarPenyakit"
-                    style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_gravity="bottom"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginEnd="40dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_height="50dp"
                     android:backgroundTint="#054b0c"
                     android:text="Lihat Daftar Penyakit"
+                    android:textColor="@android:color/white"
                     android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    app:cornerRadius="20dp"
-                    app:elevation="5dp" />
-
+                    app:cornerRadius="20dp" />
             </LinearLayout>
-
         </androidx.core.widget.NestedScrollView>
-
     </RelativeLayout>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

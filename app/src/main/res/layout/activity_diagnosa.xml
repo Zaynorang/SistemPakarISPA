@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/bg_soft"
     android:fitsSystemWindows="true">
 
+    <!-- Header Toolbar -->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,56 +14,64 @@
         app:elevation="0dp"
         app:liftOnScroll="false">
 
-
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
             app:navigationIcon="@drawable/ic_arrow_back">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_centerInParent="true"
                     android:text="Gejala Penyakit"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
-
             </RelativeLayout>
 
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <!-- Konten Scroll -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:padding="16dp"
+        android:clipToPadding="false">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            >
+            android:background="@android:color/white"
+            android:elevation="2dp"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvGejalaPenyakit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="80dp"
-                />
-
+                android:overScrollMode="never" />
 
         </LinearLayout>
-
     </androidx.core.widget.NestedScrollView>
 
+    <!-- Tombol Hasil Diagnosa -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnHasilDiagnosa"
         style="@style/Widget.MaterialComponents.Button"
@@ -70,7 +79,6 @@
         android:layout_height="60dp"
         android:layout_gravity="bottom"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="#054b0c"
@@ -79,5 +87,4 @@
         android:textColor="@color/white"
         app:cornerRadius="20dp"
         app:elevation="5dp" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

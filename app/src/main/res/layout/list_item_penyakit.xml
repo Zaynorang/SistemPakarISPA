@@ -4,48 +4,53 @@
     android:id="@+id/cvListData"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="3dp"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:strokeColor="#054B0C"
+    app:strokeWidth="1dp"
     app:cardBackgroundColor="#E1EEBC">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
-
-        <ImageView
-            android:id="@+id/iconList"
-            style="@style/Widget.AppCompat.ActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_arrow_right"
-            app:tint="@color/black" />
-
-        <TextView
-            android:id="@+id/tvKodePenyakit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:layout_toStartOf="@id/iconList"
-            android:textAppearance="?attr/textAppearanceListItem"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:visibility="gone" />
+        android:minHeight="64dp"
+        android:padding="16dp">
 
         <TextView
             android:id="@+id/tvNamaPenyakit"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
             android:layout_toStartOf="@id/iconList"
-            android:textAppearance="?attr/textAppearanceListItem"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:text="Nama Penyakit"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/tvKodePenyakit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNamaPenyakit"
+            android:layout_alignStart="@id/tvNamaPenyakit"
+            android:layout_marginTop="4dp"
+            android:text="Kode: P01"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:fontFamily="sans-serif" />
+
+        <ImageView
+            android:id="@+id/iconList"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_right"
+            app:tint="#054B0C" />
 
     </RelativeLayout>
 

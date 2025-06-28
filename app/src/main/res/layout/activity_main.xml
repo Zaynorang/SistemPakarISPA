@@ -1,205 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:fitsSystemWindows="true">
 
-    <RelativeLayout
+    <!-- Header -->
+    <ImageView
+        android:id="@+id/headerImage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_header"
+        android:contentDescription="Header" />
 
-        <FrameLayout
-            android:id="@+id/frameHeader"
+    <!-- Konten di bawah header -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="280dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:gravity="center_horizontal">
 
-            <LinearLayout
+            <!-- CARD 1: Jenis ISPA -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcGejala"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#4CAF50"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="#C8E6C9">
 
-                android:layout_height="150dp"
-                android:layout_gravity="bottom"
-                android:background="@drawable/bg_rounded_all"
-                android:gravity="bottom"
-                android:orientation="vertical">
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:layout_gravity="center"
-                android:background="@drawable/bg_rounded_all"
-                android:gravity="bottom"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
-                    android:text="Sistem Pakar Penyakit ISPA"
-                    android:textColor="@android:color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:padding="16dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <ImageView
+                        android:id="@+id/ivGejala"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:src="@drawable/ic_gejala"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvGejala"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Jenis ISPA"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121"
+                        android:fontFamily="sans-serif"
+                        app:layout_constraintStart_toEndOf="@id/ivGejala"
+                        app:layout_constraintTop_toTopOf="@id/ivGejala"
+                        app:layout_constraintBottom_toBottomOf="@id/ivGejala"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="16dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- CARD 2: Diagnosa Gejala -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcDiagnosa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#4CAF50"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="#C8E6C9">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginBottom="30dp"
-                    android:text="Diagnosa - Gejala - Penanganan"
-                    android:textColor="@android:color/white"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:padding="16dp">
 
-            </LinearLayout>
+                    <ImageView
+                        android:id="@+id/ivDiagnosa"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:src="@drawable/ic_diagnosa"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
 
-            <com.makeramen.roundedimageview.RoundedImageView
+                    <TextView
+                        android:id="@+id/tvDiagnosa"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Diagnosa Gejala"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121"
+                        android:fontFamily="sans-serif"
+                        app:layout_constraintStart_toEndOf="@id/ivDiagnosa"
+                        app:layout_constraintTop_toTopOf="@id/ivDiagnosa"
+                        app:layout_constraintBottom_toBottomOf="@id/ivDiagnosa"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="16dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- CARD 3: Tentang Aplikasi -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcTentang"
                 android:layout_width="match_parent"
-                android:layout_height="244dp"
-                android:layout_gravity="end"
-                android:layout_marginTop="-70dp"
-                android:elevation="5dp"
-                android:src="@drawable/bg_header"
-                app:riv_corner_radius_bottom_left="40dp"
-                app:riv_corner_radius_bottom_right="40dp"
-                app:riv_corner_radius_top_left="40dp" />
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#4CAF50"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="#C8E6C9">
 
-        </FrameLayout>
-
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/frameHeader"
-            android:layout_marginTop="20dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/mcGejala"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_margin="10dp"
-                    app:cardCornerRadius="30dp"
-                    app:cardElevation="3dp"
-                    app:strokeColor="@color/primary"
-                    app:strokeWidth="2dp"
-                    app:cardBackgroundColor="#E1EEBC">
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/ivTentang"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:src="@drawable/ic_about"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
 
-                        <ImageView
-                            android:id="@+id/ivGejala"
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerInParent="true"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_gejala" />
+                    <TextView
+                        android:id="@+id/tvTentang"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tentang Aplikasi"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121"
+                        android:fontFamily="sans-serif"
+                        app:layout_constraintStart_toEndOf="@id/ivTentang"
+                        app:layout_constraintTop_toTopOf="@id/ivTentang"
+                        app:layout_constraintBottom_toBottomOf="@id/ivTentang"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="16dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_marginTop="10dp"
-                            android:layout_toEndOf="@id/ivGejala"
-                            android:text="Jenis ISPA"
-                            android:textColor="#000"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
-                    </RelativeLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/mcDiagnosa"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_margin="10dp"
-                    app:cardCornerRadius="30dp"
-                    app:cardElevation="3dp"
-                    app:strokeColor="@color/primary"
-                    app:strokeWidth="2dp"
-                    app:cardBackgroundColor="#E1EEBC">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/ivDiagnosa"
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerInParent="true"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_diagnosa" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_marginTop="10dp"
-                            android:layout_toEndOf="@id/ivDiagnosa"
-                            android:text="Diagnosa Gejala"
-                            android:textColor="#000"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
-                    </RelativeLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/mcTentang"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_margin="10dp"
-                    app:cardCornerRadius="30dp"
-                    app:cardElevation="3dp"
-                    app:strokeColor="@color/primary"
-                    app:strokeWidth="2dp"
-                    app:cardBackgroundColor="#E1EEBC">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/ivTentang"
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerInParent="true"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_about" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_marginTop="10dp"
-                            android:layout_toEndOf="@id/ivTentang"
-                            android:text="Tentang Aplikasi"
-                            android:textColor="#000"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
-                    </RelativeLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-            </LinearLayout>
-
-        </androidx.core.widget.NestedScrollView>
-
-    </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
