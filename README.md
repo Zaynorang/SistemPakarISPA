@@ -152,10 +152,10 @@ app/src/main/assets/
 <img src="gambar/daftarpenyakit_1.jpeg" alt="Daftar Penyakit" width="200"/>
 
 ### Diagnosa Gejala
-<img src="gambar/daftargejala_1.jpeg" alt="Daftar Penyakit" width="200"/>
+<img src="gambar/daftargejala_1.jpeg" alt="Gejala Penyakit" width="200"/>
 
 ### Hasil Diagnosa
-![Hasil Diagnosa](gambar/gejalapenyakitcheck_1.png)
+<img src="gambar/gejalapenyakitcheck_1.png" alt="Gejala Penyakit Check" width="200"/>
 
 
 ## 👨‍💻 Kontributor
