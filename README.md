@@ -157,6 +157,9 @@ app/src/main/assets/
 ### Hasil Diagnosa
 <img src="gambar/gejalapenyakitcheck_1.png" alt="Gejala Penyakit Check" width="200"/>
 
+### Tentang Kami
+<img src="gambar/tentang_kami.png" alt="Tentang Kami" width="200"/>
+
 
 ## 👨‍💻 Kontributor
 Proyek ini dikembangkan sebagai bagian dari Tugas Ujian Akhir Semester (UAS) oleh:
