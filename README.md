@@ -149,10 +149,10 @@ app/src/main/assets/
 <img src="gambar/main_1.png" alt="Halaman Utama" width="200"/>
 
 ### Daftar Penyakit
-![Daftar Penyakit](gambar/daftarpenyakit_1.jpeg)
+<img src="gambar/daftarpenyakit_1.jpeg" alt="Daftar Penyakit" width="200"/>
 
 ### Diagnosa Gejala
-![Diagnosa Gejala](gambar/daftargejala_1.jpeg)
+<img src="gambar/daftargejala_1.jpeg" alt="Daftar Penyakit" width="200"/>
 
 ### Hasil Diagnosa
 ![Hasil Diagnosa](gambar/gejalapenyakitcheck_1.png)
