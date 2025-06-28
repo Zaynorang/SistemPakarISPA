@@ -155,7 +155,7 @@ app/src/main/assets/
 ![Diagnosa Gejala](gambar/diagnosa_gejala.png)
 
 ### Hasil Diagnosa
-![Hasil Diagnosa](gambar/hasil_diagnosa.png)
+![Hasil Diagnosa](gambar/gejalapenyakitcheck_1.png)
 
 
 ## 👨‍💻 Kontributor
